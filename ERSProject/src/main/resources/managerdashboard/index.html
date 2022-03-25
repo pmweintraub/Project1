@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manager Dashboard</title>
+
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+
+    <h1>Manager Dashboard</h1>
+
+    <div id="logout"><button class="logout-button">Logout</button></div>
+
+    <div id="container">
+
+        <div id="select-container">
+            <h6>Filter By Status:</h6>
+            <select id="select-status">
+                <option value = "1">Pending</option>
+                <option value = "2">Approved</option>
+                <option value = "3">Denied</option>
+            </select> 
+        </div>
+
+        <h5 id="table-title">Employee Reimbursements:</h5>
+        <table id="reimb-table">
+            <thead>
+                <tr>
+                    <th>ID Number</th>
+                    <th>Amount</th>
+                    <th>Description</th>
+                    <th>Submitted</th>
+                    <th>Resolved</th>
+                    <th>Author</th>
+                    <th>Resolved By</th>
+                    <th>Status</th>
+                    <th>Type</th>
+                </tr>
+            </thead>
+            <tbody id="reimbs">
+                
+            </tbody>
+        </table>
+    </div>
+
+
+    <div id="approve-deny-reimb">
+        <form id="reimb-status">
+            <h4>Approve or Deny a Request:</h4>
+
+            <div><input type="number" id="reimb" placeholder="Reimbursement ID"></div>
+
+            <div id="select-reimb-status">
+                <select id="select-status-type">
+                    <option value = "1">Pending</option>
+                    <option value = "2">Approve</option>
+                    <option value = "3">Deny</option>
+                </select> 
+            </div>
+
+            <div><button class="btn btn-primary">Submit</button></div>
+            
+        </form>
+    </div>
+
+    <script src="./script.js"></script>
+    
+</body>
+</html>
